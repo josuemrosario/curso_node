@@ -7,21 +7,29 @@ var app = express();
 app.set('view engine','ejs')
 
 //Trata as rotas usando funções de callback
+//------------------------------------------------------------
 
-//trata get /
 app.get('/',function(req,res){
-    res.send("<html><body>Portal de Notícias</body></html>");
-});
-
-//trata get /tecnologia
-app.get('/tecnologia',function(req,res){
     
     //res.send("<html><body>Noticias de Tecnologia</body></html>");
     
-    res.render("secao/tecnologia") //renderiza tecnologia.ejs
+    res.render("home/index") //renderiza uma view
 });
 
+app.get('/formulario_inclusao_noticia',function(req,res){
+   
+    res.render("admin/form_add_noticia") //renderiza uma view
+});
+
+app.get('/noticias',function(req,res){
+   
+    res.render("noticias/noticias") //renderiza uma view
+});
+
+
+
 // Executa o servidor
+//------------------------------------------------------------
 app.listen(3000,function(){
     console.log("servidor rodando com express");
 });

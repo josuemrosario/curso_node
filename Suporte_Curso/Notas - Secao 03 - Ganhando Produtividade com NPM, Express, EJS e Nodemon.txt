@@ -101,9 +101,14 @@ res.render("secao/tecnologia") => envia a pagina views\secao\tecnologia.ejs para
 
 15. Download das views do projeto prático portal de notícias
 ============================================================
-
 16. Refactoring do projeto prático portal de notícias com EJS
 =============================================================
+
+- Efetuado download da Nova pasta views e substituido no projeto
+- Refatorado código para usar o método render em vez de send
+
+Render é uma função adicionada pelo EJS engine que permite renderizar paginas Javascript com HTML
+
 
 17. NPM - Instalando e testando o Nodemon
 =========================================
