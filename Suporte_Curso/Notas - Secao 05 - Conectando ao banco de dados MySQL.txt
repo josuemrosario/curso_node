@@ -1,0 +1,27 @@
+21. NPM - Instalando o modulo de conexão do MySQL
+=================================================
+
+
+npm install mysql@2.13.0 --save
++ mysql@2.13.0
+added 7 packages from 10 contributors and audited 54 packages in 7.649s
+found 12 vulnerabilities (3 low, 3 moderate, 5 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+22. Extra - Instalando o banco de dados MySQL
+=============================================
+
+23. Extra - Instalando o banco de dados MySQL no OSX (Mac)
+==========================================================
+
+24. Criando e populando o banco de dados do projeto prático portal de notícias
+==============================================================================
+
+25. Criando a conexão com o MySQL e recuperando dados
+=====================================================
+
+26. EJS - Criando views dinâmicas com JavaScript
+================================================
+
+27. Refactoring do método de conexão com o banco de dados MySQL
+===============================================================
