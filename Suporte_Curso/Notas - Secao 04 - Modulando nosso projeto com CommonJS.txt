@@ -29,7 +29,8 @@ https://www.youtube.com/watch?v=-Hc7V1R5bt0
 19. Criando um módulo para configurações do servidor
 ====================================================
 
-
+- Criou o serverljs que configura o express e o ejs e cria o app
+- Importou server.js no app.js
 
 20. Reestruturando a aplicação e criando um módulo para definição das rotas
 ===========================================================================

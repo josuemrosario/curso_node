@@ -1,14 +1,7 @@
-//Configura o Express
 
-var express = require('express');
-var app = express();
+//Carrega arquivo de configuracao do app (que cria o app)
+var app = require('./config/server');
 
-//aula 18 teste de módulos
-var msg = require('./mod_teste');
-
-
-//configura o view engine - ejs
-app.set('view engine','ejs')
 
 //Trata as rotas usando funções de callback
 //------------------------------------------------------------
@@ -36,8 +29,6 @@ app.get('/noticias',function(req,res){
 //------------------------------------------------------------
 app.listen(3000,function(){
     console.log("servidor rodando com express");
-    //console.log(msg);
-    console.log(msg()); //aula 18
 });
 
 
