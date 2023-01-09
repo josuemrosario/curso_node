@@ -47,8 +47,21 @@ About to write to G:\Projetos\curso_node\package.json:
 
 Is this OK? (yes) yes
 
+
+
 12. NPM - Instalando o Express
 ==============================
+
+npm install express@4.15.3 -save => baixa o express e dependencias automaticamente
+
+npm install express@4.15.3 -save
+npm notice created a lockfile as package-lock.json. You should commit this file.
++ express@4.15.3
+added 45 packages from 30 contributors and audited 45 packages in 11.283s
+found 10 vulnerabilities (3 low, 2 moderate, 5 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+criado arquivo .gitignore
 
 13. Refactoring do projeto prático portal de notícias com Express
 =================================================================
