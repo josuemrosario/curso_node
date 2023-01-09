@@ -34,3 +34,18 @@ https://www.youtube.com/watch?v=-Hc7V1R5bt0
 
 20. Reestruturando a aplicação e criando um módulo para definição das rotas
 ===========================================================================
+- Criado a pasta app
+- Movido views para dentro de app
+- Criado app/routes
+- Criado arquivos routes/
+   noticias.js => atua sobre a rotas /noticias
+   formulario_inclusao_noticias.js => rota /formulario_inclusao_noticia
+   home.js => rota '/'
+- Modificado app.js para incluir os arquivos de rotas
+
+Resumo do sistema
+- App.js roda
+- Executa config/server.js
+- server.js cria exporta a var app que sao as configurações básicas (express, ejs, diretorio de views
+- App.js carrega as rotas dentro de routes e executa suas funções
+- Os arquivos de funções de rotas (.ejs) exportam as funções de callback que  serão executadas quando uma determinada rota é chamada.

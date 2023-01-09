@@ -6,24 +6,15 @@ var app = require('./config/server');
 //Trata as rotas usando funções de callback
 //------------------------------------------------------------
 
-app.get('/',function(req,res){
-    
-    //res.send("<html><body>Noticias de Tecnologia</body></html>");
-    
-    res.render("home/index") //renderiza uma view
-});
+var rotaNoticias = require('./app/routes/noticias');
+rotaNoticias(app);
+//obs: Tambem e Possivel usar var rotaNoticias = require('./app/routes/noticias')(); e eliminar uma linha
 
-app.get('/formulario_inclusao_noticia',function(req,res){
-   
-    res.render("admin/form_add_noticia") //renderiza uma view
-});
+var rotaHome = require('./app/routes/home');
+rotaHome(app);
 
-app.get('/noticias',function(req,res){
-   
-    res.render("noticias/noticias") //renderiza uma view
-});
-
-
+var rotaFormInclusaoNoticia = require('./app/routes/formulario_inclusao_noticia');
+rotaFormInclusaoNoticia(app);
 
 // Executa o servidor
 //------------------------------------------------------------
