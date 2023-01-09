@@ -1,0 +1,12 @@
+7. Executando arquivos JavaScript no NodeJS
+===========================================
+
+Criar pasta curs_node
+Criar arquivo noticias.js
+
+Executar o arquivo javascript
+node noticias.js
+
+8. Respondendo requisições HTTP com NodeJS
+9. Respondendo requisições com base na url requisitada
+Teste 1: Exercícios de Fixação

@@ -1,0 +1,22 @@
+Seção 1 - Conhecendo Tecnologias e se preparando para o Desenvolvimento
+========================================================================
+
+1. Introdução ao NodeJS
+
+Pagina Oficial
+https://nodejs.org/en/
+
+Verificar a versão do node instalada
+node --v
+
+2. [Extra] Canais de comunicação
+
+3. Entendendo o conceito client-server e a dinâmica de aplicações web
+4. Download e instalação do NodeJS
+5. [Linux] - Instalação do NodeJS
+6. Instalando o sublime text para criação/edição de scripts
+
+Pagina Oficial do Sublime Text
+https://www.sublimetext.com/
+
+
