@@ -73,6 +73,16 @@ git push origin main
 13. Refactoring do projeto prático portal de notícias com Express
 =================================================================
 
+- criado app.js
+
+node app.js
+servidor rodando com express
+
+app.get('/',function(req,res){(...)}) => recebe requisições get da rota principal e trata através de função de callback
+
+res.send = > funcao do Express que envia uma resposta ao cliente
+
+
 14. NPM - Instalando o EJS
 ==========================
 
