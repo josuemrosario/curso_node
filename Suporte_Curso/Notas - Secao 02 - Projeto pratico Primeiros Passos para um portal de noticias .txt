@@ -20,7 +20,7 @@ https://nodejs.org/api/http.html#requestenddata-encoding-callback
 ======================================================
 
 req.url -> Rota que está sendo acessada
-ex: se a url for http://localhost:3000/moda retorna moda
+ex: se a url for http://localhost:3000/moda retorna /moda
 
 Teste 1: Exercícios de Fixação
 ======================================================

@@ -1,0 +1,66 @@
+10. Visão geral do NPM, Express, EJS e Nodemon
+==============================================
+nodemon => reinicia automaticamente o servidor assim que o código muda.
+
+11. Iniciando o NPM em nosso projeto
+==============================================
+
+npm é instalado junto ao node
+npm -v
+
+npm init =>  Cria o arquivo package.json
+package.json => Arquivo de configurações de dependencias do NPM
+
+-rodado comando npm init
+npm init
+package name: (curso_node) portal_noticias
+version: (1.0.0)
+description:
+entry point: (Noticias.js)
+test command:
+git repository: (https://github.com/josuemrosario/curso_node.git)
+keywords:
+author:
+license: (ISC)
+About to write to G:\Projetos\curso_node\package.json:
+
+{
+  "name": "portal_noticias",
+  "version": "1.0.0",
+  "description": "Portal de Noticias",
+  "main": "Noticias.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josuemrosario/curso_node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josuemrosario/curso_node/issues"
+  },
+  "homepage": "https://github.com/josuemrosario/curso_node#readme"
+}
+
+
+Is this OK? (yes) yes
+
+12. NPM - Instalando o Express
+==============================
+
+13. Refactoring do projeto prático portal de notícias com Express
+=================================================================
+
+14. NPM - Instalando o EJS
+==========================
+
+15. Download das views do projeto prático portal de notícias
+============================================================
+
+16. Refactoring do projeto prático portal de notícias com EJS
+=============================================================
+
+17. NPM - Instalando e testando o Nodemon
+=========================================
