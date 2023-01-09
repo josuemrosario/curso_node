@@ -21,11 +21,12 @@ CREATE OR REPLACE TABLE noticias(
     noticia text,
     data_criacao timestamp default current_timestamp);
     
+SELECT * FROM noticias;    
+
 INSERT INTO noticias(titulo, noticia) 
 	 VALUES ('Titulo da noticia','conteudo da noticia');
 
-SELECT * FROM noticias;
-    
-
-
+-- aula 25     
+INSERT INTO noticias(titulo, noticia) 
+	 VALUES ('Outra noticia','conteudo da outra noticia');     
 
