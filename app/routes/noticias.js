@@ -13,7 +13,10 @@ module.exports = function(app){
         });
     
         connection.query('select * from noticias',function(erro,result){
-            res.send(result);
+            //res.send(result);
+
+            //aula 26
+            res.render("noticias/noticias", {noticias : result})
         });
 
         //res.render("noticias/noticias") //renderiza uma view

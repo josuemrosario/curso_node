@@ -55,8 +55,22 @@ INSERT INTO noticias(titulo, noticia)
 25. Criando a conexão com o MySQL e recuperando dados
 =====================================================
 
+mysql.createConnection(sql , funcao de callback) => sql = texto da consulta, funcao de callback que será executada quando a consulta for feita)
+
+INSERT INTO noticias(titulo, noticia) 
+	 VALUES ('Outra noticia','conteudo da outra noticia');
+
+
 26. EJS - Criando views dinâmicas com JavaScript
 ================================================
+
+Request solicita a rota /noticias
+a funcao em routes\noticias.js é chamada
+Conexao com o banco é feita e query efetuada
+view noticias/noticias é chamada
+
+<% %> roda comandos
+<%= %> mostra o conteudo de variaveis
 
 27. Refactoring do método de conexão com o banco de dados MySQL
 ===============================================================
