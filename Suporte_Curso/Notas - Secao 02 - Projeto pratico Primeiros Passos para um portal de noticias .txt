@@ -8,5 +8,13 @@ Executar o arquivo javascript
 node noticias.js
 
 8. Respondendo requisições HTTP com NodeJS
+===========================================
+
+require('http') 
+https://www.w3schools.com/nodejs/nodejs_http.asp
+
+res.end
+https://nodejs.org/api/http.html#requestenddata-encoding-callback
+
 9. Respondendo requisições com base na url requisitada
 Teste 1: Exercícios de Fixação
