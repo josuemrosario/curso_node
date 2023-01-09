@@ -86,6 +86,19 @@ res.send = > funcao do Express que envia uma resposta ao cliente
 14. NPM - Instalando o EJS
 ==========================
 
+EJS => permite criar paginas HTML com Javascripts
+
+npm install ejs@2.5.6 --save
++ ejs@2.5.6
+added 1 package from 2 contributors and audited 47 packages in 3.517s
+found 11 vulnerabilities (3 low, 2 moderate, 5 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+cria node_modules\ejs
+
+res.render("secao/tecnologia") => envia a pagina views\secao\tecnologia.ejs para ser renderizada pelo browser
+
+
 15. Download das views do projeto prático portal de notícias
 ============================================================
 
