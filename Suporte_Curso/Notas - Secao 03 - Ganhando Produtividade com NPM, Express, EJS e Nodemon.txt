@@ -63,6 +63,13 @@ found 10 vulnerabilities (3 low, 2 moderate, 5 high)
 
 criado arquivo .gitignore
 
+Mesmo criando o .gitignore a pasta node_modules foi enviado ao Github.
+Pasta foi removida usando 
+git rm -r --cached node_modules
+git commit -m "Removed node_modules"
+git push origin main
+
+
 13. Refactoring do projeto prático portal de notícias com Express
 =================================================================
 
