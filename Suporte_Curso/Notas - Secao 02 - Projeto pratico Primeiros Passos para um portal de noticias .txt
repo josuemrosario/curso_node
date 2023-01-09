@@ -17,4 +17,10 @@ res.end
 https://nodejs.org/api/http.html#requestenddata-encoding-callback
 
 9. Respondendo requisições com base na url requisitada
+======================================================
+
+req.url -> Rota que está sendo acessada
+ex: se a url for http://localhost:3000/moda retorna moda
+
 Teste 1: Exercícios de Fixação
+======================================================
