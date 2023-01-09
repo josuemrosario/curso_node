@@ -3,6 +3,10 @@
 var express = require('express');
 var app = express();
 
+//aula 18 teste de módulos
+var msg = require('./mod_teste');
+
+
 //configura o view engine - ejs
 app.set('view engine','ejs')
 
@@ -32,6 +36,8 @@ app.get('/noticias',function(req,res){
 //------------------------------------------------------------
 app.listen(3000,function(){
     console.log("servidor rodando com express");
+    //console.log(msg);
+    console.log(msg()); //aula 18
 });
 
 

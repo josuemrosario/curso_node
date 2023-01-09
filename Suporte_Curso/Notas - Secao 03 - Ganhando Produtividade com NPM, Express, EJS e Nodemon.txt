@@ -52,6 +52,10 @@ Is this OK? (yes) yes
 12. NPM - Instalando o Express
 ==============================
 
+paginas
+https://expressjs.com/
+
+
 npm install express@4.15.3 -save => baixa o express e dependencias automaticamente
 
 npm install express@4.15.3 -save
@@ -112,3 +116,17 @@ Render é uma função adicionada pelo EJS engine que permite renderizar paginas
 
 17. NPM - Instalando e testando o Nodemon
 =========================================
+
+nodemon => restarta o server e roda novamente quando existe alteração. Evita ficar rodando node app.js a todo momento
+
+Paginas
+https://nodemon.io/
+https://www.npmjs.com/package/nodemon
+
+
+nodemon não é um módulo do projeto (não fica em node_modules)
+
+npm install -g nodemon@1.10.2 
+
+nodemon app.js
+

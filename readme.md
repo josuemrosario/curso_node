@@ -29,6 +29,7 @@ Jorge Sant'ana
 * HTML
 * MVC
 * API RESTful
+* CommonJS
 
 # Passos Iniciais
 * Instalar Node.js

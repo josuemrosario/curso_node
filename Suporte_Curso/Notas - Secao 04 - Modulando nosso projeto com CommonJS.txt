@@ -1,0 +1,35 @@
+18. O que são módulos e o que é CommonJS?
+=========================================
+
+Módulos => Pequenos pedaços de códigos independentes. Melhoria de manutenção
+CommonJS => Sistema de módulos padrão do Node
+
+module.exports => exporta recursos de um módulo para outro
+
+A linha abaixo dentro de mod_teste.js exporta msg
+module.exports = msg;
+
+A linha abaixo importa msg para dentro de app.js e permite o uso
+var msg = require('./mod_teste.js');
+
+- Geralmente se exportam funções em módulos.
+
+#Pesquisaaparte
+
+- CommmonJS está aparentemente ultrassado e foi substituído pela sintaxe do ECMAScript
+https://web.dev/i18n/pt/commonjs-larger-bundles/
+
+Um guia para MÓDULOS JavaScript (ES6 Modules)
+https://www.youtube.com/watch?v=-Hc7V1R5bt0
+
+- No ES6 o navegador baixa recursivamente tudo que é necessário. Se a pagina dependende de um módulo A e o módulo A dependende de um módulo B ao carregar o módulo A na pagina o navegador entende que A precisa de B e baixa também B
+
+- A nova sintaxe é usada através do atributo type que é colocado na tag Script
+
+19. Criando um módulo para configurações do servidor
+====================================================
+
+
+
+20. Reestruturando a aplicação e criando um módulo para definição das rotas
+===========================================================================
