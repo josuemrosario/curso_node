@@ -17,8 +17,9 @@ app.set('views','./app/views')
 //Aula 31 - Configura o diretório de rotas no consign
 //Aula 32 - inserido conexão com o banco
 consign()
-    .include('app/routes')
-    .then('config/dbConnection.js')
+    .include('app/routes') //rotas
+    .then('config/dbConnection.js') // acesso a banco
+    .then('app/models') // modelos
     .into(app);
 
 

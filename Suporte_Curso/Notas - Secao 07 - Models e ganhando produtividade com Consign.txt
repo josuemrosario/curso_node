@@ -69,5 +69,20 @@ var connection = app.config.dbConnection();
 
 34. Implementando models
 ========================
+- Models representam entidades da aplicação
+- Em linhas gerais representam uma tabela (um objeto)
+- Regras de negócio serão colocadas nos models
+
+- Cria a pasta models
+- Cria o modelo noticiasModel.js
+- Inclui os modelos para ser carregado pelo consign (server.js)
+- Cria as funções getNoticias e getNoticia no model noticiasModel
+- Selects do banco e callback dos selects passam a ser feito no noticiasModel
+- Altera a route noticia.js para instanciar o model noticiasModel e fazer o select e callback no model
+- Altera a route noticias.js para instanciar o model noticiasModel e fazer o select e callback no model
+
+
+
+
 35. Opcional - Download dos arquivos portal de notícias
 =======================================================
