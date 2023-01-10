@@ -17,11 +17,32 @@ A partir da ultima atualização do programa, ao iniciar o servidor passa a ocor
 30. NPM - Instalando o Consign
 ==============================
 
-Comando de instalação do consign
+- Comando de instalação do consign
 npm install consign@0.1.6 --save
 
 31. Refactoring do projeto prático portal de notícias com Consign (routes)
 ==========================================================================
+
+- Consign foi configurado em config/server.js
+
+consign().include('routes').into(app); => faz um scan da pasta routes e inclui todas as rotas dentro do app
+
+- Todas as rotas foram comentadas em app.js pois serão importadas automaticamente no start da aplicação
+
+- Ao iniciar com consign ocorre a seguinte saida :
+
+> nodemon app.js
+[nodemon] 1.10.2
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node app.js`
+consign v0.1.6 Initialized in G:\Projetos\curso_node
++ .\app\routes\formulario_inclusao_noticia.js
++ .\app\routes\home.js
++ .\app\routes\noticias.js
+servidor rodando com express
+
+
 32. Refactoring do projeto prático portal de notícias com Consign (banco de dados)
 ==================================================================================
 33. Criando a página de detalhes das notícias

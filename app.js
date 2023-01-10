@@ -6,15 +6,19 @@ var app = require('./config/server');
 //Trata as rotas usando funções de callback
 //------------------------------------------------------------
 
-var rotaNoticias = require('./app/routes/noticias');
-rotaNoticias(app);
+
+//Comentado na aula 31 (foi introduzido consign, não é mais necessario)
+//var rotaNoticias = require('./app/routes/noticias');
+//rotaNoticias(app);
 //obs: Tambem e Possivel usar var rotaNoticias = require('./app/routes/noticias')(); e eliminar uma linha
 
-var rotaHome = require('./app/routes/home');
-rotaHome(app);
+//Comentado na aula 31 (foi introduzido consign, não é mais necessario)
+//var rotaHome = require('./app/routes/home');
+//rotaHome(app);
 
-var rotaFormInclusaoNoticia = require('./app/routes/formulario_inclusao_noticia');
-rotaFormInclusaoNoticia(app);
+//Comentado na aula 31 (foi introduzido consign, não é mais necessario)
+//var rotaFormInclusaoNoticia = require('./app/routes/formulario_inclusao_noticia');
+//rotaFormInclusaoNoticia(app);
 
 // Executa o servidor
 //------------------------------------------------------------
