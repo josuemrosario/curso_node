@@ -4,9 +4,21 @@
 
 - Efetua autoload de views e arquivos de configuração e controllers
 
+NOTA EXTRA
+==========
+
+A partir da ultima atualização do programa, ao iniciar o servidor passa a ocorrer este erro:
+
+(node:143728) [DEP0126] DeprecationWarning: timers.active() is deprecated. Please use timeout.refresh() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:143728) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+
+
 30. NPM - Instalando o Consign
 ==============================
 
+Comando de instalação do consign
+npm install consign@0.1.6 --save
 
 31. Refactoring do projeto prático portal de notícias com Consign (routes)
 ==========================================================================

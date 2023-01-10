@@ -30,6 +30,7 @@ Jorge Sant'ana
 * MVC
 * API RESTful
 * CommonJS
+* Consign 0.1.6
 
 # Passos Iniciais
 * Instalar Node.js
@@ -41,12 +42,15 @@ Rodar Vscode.bat (no Windows)
 Abrir Xampp-Control e rodar Mysql
 Obs: Banco deve estar criado antes de rodar o projeto.
 * Executar o projeto:
-node Noticias.js
+node Noticias.js 
+ou nodemon Noticias.js
 
 # Comandos de criação do Banco de dados
 1. Instalar o Xampp
 2. Rodar o Xampp e colocar o MariaDB no ar
-obs.: passo a passo será atualizado em breve
+3. Usar os scripts de criação do banco disponiveis em  ./Scrips_Portal_Noticias.sql
+4. Usar os scripts de criação de tabelas disponiveis em  ./Scrips_Portal_Noticias.sql
+5. Usar os scripts de inserção de dados disponiveis em  ./Scrips_Portal_Noticias.sql
 
 # Links Importantes
 
