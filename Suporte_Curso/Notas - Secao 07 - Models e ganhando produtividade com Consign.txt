@@ -64,6 +64,9 @@ var connection = app.config.dbConnection();
 
 33. Criando a página de detalhes das notícias
 =============================================
+- Cria a rota routes/noticia.js que passa um array com 1 notícia para a view noticia
+- Refatora a view views/noticias/noticia.ejs que recebe o array e mostra
+
 34. Implementando models
 ========================
 35. Opcional - Download dos arquivos portal de notícias
