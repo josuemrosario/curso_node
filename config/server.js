@@ -15,7 +15,11 @@ app.set('view engine','ejs')
 app.set('views','./app/views')
 
 //Aula 31 - Configura o diretório de rotas no consign
-consign().include('app/routes').into(app);
+//Aula 32 - inserido conexão com o banco
+consign()
+    .include('app/routes')
+    .then('config/dbConnection.js')
+    .into(app);
 
 
 module.exports  = app;

@@ -45,6 +45,23 @@ servidor rodando com express
 
 32. Refactoring do projeto prático portal de notícias com Consign (banco de dados)
 ==================================================================================
+
+- Atenção: Consign importa um modulo para o programa e executa todas as funções exportadas.
+consign()
+    .include('app/routes')
+    .then('config/dbConnection.js')
+    .into(app);
+ nesse ponto se fosse importado todo o config then('config'), o server.js seria executado novamente e entraria em loop dai a necessidade de informar específicamente o módulo que precisamos importar com extensão inclusive
+
+Log de alterações
+- Server.js passa a importar o dbConnection através do Consign
+- No modulo dbConnection foi criada o Wrapper connMySQL que retorna a conexão (evita execução automatica no autoload)
+- O modulo dbConnection passa a exportar o Wrapper connMySQL
+- Noticias.js passa a usar o dbConnection importando pelo consign em vez de importar diretamente.
+- Toda rota que for usar conexão com o banco vai precisar ter essa linha
+var connection = app.config.dbConnection();
+
+
 33. Criando a página de detalhes das notícias
 =============================================
 34. Implementando models
