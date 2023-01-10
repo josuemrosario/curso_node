@@ -73,6 +73,8 @@ var connection = app.config.dbConnection();
 - Em linhas gerais representam uma tabela (um objeto)
 - Regras de negócio serão colocadas nos models
 
+
+alterações feitas
 - Cria a pasta models
 - Cria o modelo noticiasModel.js
 - Inclui os modelos para ser carregado pelo consign (server.js)
@@ -82,7 +84,20 @@ var connection = app.config.dbConnection();
 - Altera a route noticias.js para instanciar o model noticiasModel e fazer o select e callback no model
 
 
-
-
 35. Opcional - Download dos arquivos portal de notícias
 =======================================================
+- Apenas arquivos para download.
+
+
+RESUMO DO SISTEMA ATÉ O MOMENTO
+===============================
+
+- app.js roda
+- config/server.js 
+    configura EJS 
+    Consign faz autoload das rotas e modelos e insere dentro do objeto app 
+- Quando o consign faz o autoload das rotas cada rota executa uma função de callback específica 
+- Essa função de callback cria a conexão com o banco e instancia um model (ex: noticiasModel) passando a conexão com o banco e uma função de callback. Essa função de callback passada é reponsável por renderizar a view
+- O model ao ser chamado usa a conexao que foi passada para ele e executa um select com o banco
+e também executa a função de callback(que renderiza a view)
+   
