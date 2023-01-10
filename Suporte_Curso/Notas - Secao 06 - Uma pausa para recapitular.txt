@@ -1,0 +1,8 @@
+28. Uma pausa para recapitular
+==============================
+
+- Recaptula alguns conceitos aprendidos
+
+app -> Tudo relacionado a pagina
+config -> configuração ex: banco etc
+node_modules -> modulos utilizados pela aplicação. Baixados pelo NPM

@@ -1,0 +1,20 @@
+29. O que é o Consign?
+======================
+- Permite incluir rotas automaticamente. Por exemplo se houver 20 rotas dentro de routes ele automaticamente importa para a aplicação em momento de execução
+
+- Efetua autoload de views e arquivos de configuração e controllers
+
+30. NPM - Instalando o Consign
+==============================
+
+
+31. Refactoring do projeto prático portal de notícias com Consign (routes)
+==========================================================================
+32. Refactoring do projeto prático portal de notícias com Consign (banco de dados)
+==================================================================================
+33. Criando a página de detalhes das notícias
+=============================================
+34. Implementando models
+========================
+35. Opcional - Download dos arquivos portal de notícias
+=======================================================

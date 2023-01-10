@@ -74,3 +74,8 @@ view noticias/noticias é chamada
 
 27. Refactoring do método de conexão com o banco de dados MySQL
 ===============================================================
+
+- Criado config/dbconnection.js para conter a abertura de conexões com o banco
+- Refatorado noticias.js
+- Noticias cria o objeto connection que abre a conexão com o banco e executa as queries
+
