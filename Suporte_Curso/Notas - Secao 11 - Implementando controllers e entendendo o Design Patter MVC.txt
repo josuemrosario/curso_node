@@ -7,5 +7,37 @@
 
 49. Designer pattern Model-View-Controller (MVC)
 ================================================
+- Overview sobre o padrão MVC
+
 50. Opcional - Download dos arquivos portal de notícias
 =======================================================
+- apenas para download de todo o código
+
+
+Parte 01
+--------
+
+- app.js roda config/server.js
+- config/server.js 
+    configura EJS 
+    Consign faz autoload das rotas e modelos e insere dentro do objeto app 
+    Configura o bodyparser que permite que sejam enviados parametros via urlencoded
+
+Parte 2
+--------
+ -  Usuário chama uma rota especifica usando um verbo especifico (GET, POST etc)
+   A pesquisa é feita dentro dos arquivos que estão dentro de ./routes
+
+- Cada rota carregada chamará um controller (app/controllers) passando o objeto 
+    application => Contém configurações iniciais, rotas, views e controllers que foram carregados
+    req => a requisição feita
+    res => um objeto response que poderá ser usado para manipuar a resposta
+
+- Um controller é uma função especifica que vai fazer alguma ação como por exemplo retornar uma view para o usuário
+- Quando é necessário acesso a banco é chamado um model app/model que retorna com
+
+Parte 3
+-------
+O modelo 
+  - faz efetivamente a conexão com o banco
+  - Executa queries

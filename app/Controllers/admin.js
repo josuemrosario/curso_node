@@ -2,7 +2,7 @@ module.exports.formulario_inclusao_noticia = function(application, req, res){
     res.render("admin/form_add_noticia", {validacao: {},noticia : {}}) //renderiza uma view
 }
 
-module.exports.noticias_salvar= function(application, req, res){
+module.exports.noticias_salvar = function(application, req, res){
     var noticia = req.body;  //funciona apenas com body parser instalado
     //res.send(noticias);
     //res.render("admin/form_add_noticia") //renderiza uma view

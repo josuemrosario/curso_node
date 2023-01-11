@@ -14,6 +14,9 @@ app.set('view engine','ejs')
 //configura o diretorio padrão das views
 app.set('views','./app/views')
 
+//Inclusão de arquivos estaticos (aula 52)
+app.use(express.static('./app/public'))
+
 
 //Aula 39 configura body parser
 var bodyParser = require('body-parser');
@@ -23,6 +26,8 @@ app.use(bodyParser.urlencoded({extended: true})); //trata parametros enviados pe
 //Aula 44 - configura Express validator
 var expressValidator = require('express-validator');
 app.use(expressValidator());
+
+
 
 
 //Aula 31 - Configura o diretório de rotas no consign
