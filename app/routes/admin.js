@@ -11,6 +11,20 @@ module.exports = function(application){
         //res.send(noticias);
         //res.render("admin/form_add_noticia") //renderiza uma view
 
+        //aula 45 validacao de dados
+        req.assert('titulo','Título é Obrigatório').notEmpty();
+        req.assert('resumo','Resumo é Obrigatório').notEmpty();
+        req.assert('resumo','Resumo deve conter entre 10 e 100 carateres').len(10,100);
+        req.assert('autor','Autor é Obrigatório').notEmpty();
+        req.assert('data_noticia','Data é Obrigatória').notEmpty().isDate({format: 'YYYY-MM-DD'});
+        req.assert('noticia','Noticia é Obrigatória').notEmpty();
+
+        var erros = req.validationErrors();
+        if(erros){
+            res.render("admin/form_add_noticia")
+            return;
+        }
+
         //aula 40
         var connection = application.config.dbConnection();
         

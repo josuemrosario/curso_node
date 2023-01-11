@@ -28,5 +28,9 @@ INSERT INTO noticias(titulo, noticia)
 
 -- aula 25     
 INSERT INTO noticias(titulo, noticia) 
-	 VALUES ('Outra noticia','conteudo da outra noticia');     
-
+	 VALUES ('Outra noticia','conteudo da outra noticia');   
+     
+-- Aula 45
+ALTER TABLE noticias ADD COLUMN resumo varchar(100);
+ALTER TABLE noticias ADD COLUMN autor varchar(30);
+ALTER TABLE noticias ADD COLUMN data_noticia date;

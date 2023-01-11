@@ -20,6 +20,15 @@ found 17 vulnerabilities (7 low, 4 moderate, 5 high, 1 critical)
 
 45. Refactoring do projeto prático portal de notícias com Express Validator
 ===========================================================================
+- Acrescentado os campos resumo autor e data na tabela noticias
+- Modificado admin.js para validar dados
+
+req.assert('titulo','Título é Obrigatório').notEmpty(); => nao pode ser vazio
+.len(10,100); => entre 10 e 100 caracteres
+.isDate({format: 'YYYY-MM-DD'}) => é uma data
+var erros = req.validationErrors(); => verifica se houve erros
+
+
 46. Exibindo erros de validação com express-validator
 =====================================================
 47. Mantendo o preenchimento do formulário
