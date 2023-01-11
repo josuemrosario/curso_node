@@ -29,7 +29,18 @@ req.assert('titulo','Título é Obrigatório').notEmpty(); => nao pode ser vazio
 var erros = req.validationErrors(); => verifica se houve erros
 
 
+
+
 46. Exibindo erros de validação com express-validator
 =====================================================
+
+- validationErrors() gera um array de erros que é passado para view form_add_noticias
+- A view mostra os erros
+
+
 47. Mantendo o preenchimento do formulário
 ==========================================
+
+- Garante que ao preencher incorretamente, além dos erros, seja exibido os valores que foram preenchidos anteriormente
+- application.post('/noticias/salvar passa a enviar a noticia que está no corpo do response
+- Adicionado as propriedade value no form_add_noticia.ejs com os respectivos valors
