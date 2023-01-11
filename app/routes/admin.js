@@ -13,9 +13,13 @@ module.exports = function(application){
 
         //aula 40
         var connection = application.config.dbConnection();
-        var noticiasModel = application.app.models.noticiasModel;
         
-        noticiasModel.salvarNoticia(noticia,connection,function(erro,result){
+        //comentado na aula 42
+        //var noticiasModel = application.app.models.noticiasModel;
+        var noticiasModel = new application.app.models.NoticiasDAO(connection);
+
+        
+        noticiasModel.salvarNoticia(noticia,function(erro,result){
             //res.render("noticias/noticias", {noticias : result});
             //obs: render não funciona porque permite F5 que reenvia os dados e duplica no banco
             res.redirect('/noticias');

@@ -1,7 +1,7 @@
 //Comentado na aula 32 - Modulo será importando pelo Consign( server.js)
 //var dbConnection = require('../../config/dbConnection'); //aula 27
 
-module.exports = function(app){
+module.exports = function(application){
     //Comentado na aula 32
     //var connection = dbConnection(); //aula 27
     
@@ -22,17 +22,23 @@ module.exports = function(app){
     //});
 
     //Aula 32 nova implementação a partir do uso do consign
-    app.get('/noticias',function(req,res){
+    application.get('/noticias',function(req,res){
   
-        var connection = app.config.dbConnection();
-        var noticiasModel = app.app.models.noticiasModel; //aula 34
+        var connection = application.config.dbConnection();
+        
+        //comentado na aula 42
+        //var noticiasModel = application.app.models.noticiasModel; //aula 34
+
+        //42 passou a gerar a instancia noticiasModel
+        var noticiasModel = new application.app.models.NoticiasDAO(connection);
+
 
         //implementação antiga . Alterada na aula 34. Query passou a ser feita no model
         //connection.query('select * from noticias',function(erro,result){
         //    res.render("noticias/noticias", {noticias : result});
         //});
 
-        noticiasModel.getNoticias(connection,function(erro,result){
+        noticiasModel.getNoticias(function(erro,result){
             res.render("noticias/noticias", {noticias : result});
         });
 

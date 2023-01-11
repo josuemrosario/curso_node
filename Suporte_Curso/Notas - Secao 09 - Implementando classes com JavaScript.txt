@@ -1,4 +1,73 @@
 41. Classes convencionais x classes JavaScript
 ==============================================
+- classes podem ser definidas como funções em javascript
+- métodos de classes também podem ser adicionados via prototype
+- Usar _ (underline) antes do nome indica que é um atributo
+
+exemplo 1
+
+function Noticias(){
+  this.titulo = '';
+  this.getNoticias = function(){ }
+}
+
+
+exemplo 2
+
+function Noticias(){
+  this.titulo = '';
+}
+
+Noticias.prototype.getNoticias = function(){ }
+
+
 42. Refactoring do projeto prático portal de notícias - implementando classes
 =============================================================================
+- Tranformar models em classes (Design patter DAO)
+#pesquisaextra
+(versão 2022) Compreendendo o Padrão Data-Access-Object (DAO)
+https://www.youtube.com/watch?v=Z3McdtW2exU
+
+Resumo de alterações
+- Refatorado noticiasModel.js, todas as funções se tornaram funções da classe Noticias
+- Modulo passou a exportar Noticias
+- Connection passou a ser um atributo da classe
+- Os metodos da classe passaram a usar o attributo da classe não foi mais necessario passar a connection para os mesmos
+- Noticias.js passa a enviar o connection no momento da instaciação do noticiasModel
+- O model noticiasModel passsa a chamar NoticiasDAO e a classe do mesmo NoticiasDAO também
+
+
+RESUMO DO SISTEMA ATÉ O MOMENTO
+===============================
+
+Parte 01
+--------
+
+- app.js roda config/server.js
+- config/server.js 
+    configura EJS 
+    Consign faz autoload das rotas e modelos e insere dentro do objeto app 
+    Configura o bodyparser que permite que sejam enviados parametros via urlencoded
+
+- Cada rota carregada terá sua propria função de callback que será chamada quando a rota for chamada. As rotas estão dentro de ./routes
+
+
+Parte 2
+--------
+   Usuário chama uma rota especifica usando um verbo especifico (GET, POST etc)
+   A pesquisa é feita dentro dos arquivos que estão dentro de ./routes
+   exemplo: app.get('/noticias',function(req,res) { (...) })
+   req -> Requisição feita (com parametros urlencoded)
+   res -> resposta que será manipulada dentro da função de callback
+   A funçao de callback tem algumas funções
+     - Criar a conexão com o banco
+     - Instanciar o model
+     - Receber parametros via request
+     - Enviar estes dados para método que está dentro do modelo
+
+Parte 3
+-------
+O modelo 
+  - faz efetivamente a conexão com o banco
+  - Executa queries
+  - Executa a função de callback ( que tem a função de redirecionar para a pagina correta da aplicação)
