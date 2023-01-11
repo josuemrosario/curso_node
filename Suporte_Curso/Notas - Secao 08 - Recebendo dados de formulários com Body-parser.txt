@@ -7,9 +7,41 @@ form_add_noticia.ejs
 
 37. Extra - Resolvendo conflitos de encoding
 ============================================
+- Mesmo configurando utf8 no sistema, o arquivo fonte também deve ser salvo com UTF8
+
+
+#conteudopesquisado
+https://learn.microsoft.com/pt-br/powershell/scripting/dev-cross-plat/vscode/understanding-file-encoding?view=powershell-7.3
+
+configurar vsCode com utf8
+
+Ctrl+,
+procurar por files.encoding
+definir como utf8
+
+
+Na parte debaixo do vscode também é mostrada a codificação do arquivo. Se clicar em cima aparecem opções interessantes, inclusive de salvamento como utf8
+
+Obs: Inicialmente o arquivo não foi salvo como UTF8. Posteriormente o VsCode identificou e alterou para UFT8 automaticamente (e os caracteres estranhos permaneceram no código). Como os arquivos foram baixados provavelmente já vieram com codificação errada.
+
+
 38. Extra - Resolvendo conflitos de encoding [SUBLIME TEXT 3]
 =============================================================
+- Apenas informações sobre como configurar UTF8 no sublime text 3
+
+
 39. Recebendo dados de formulários via POST com Body-parser
 ===========================================================
+- formulario_inclusao_noticia.ejs para a se chamar admin.ejs
+- adicionado rota /noticias/salvar
+req.body; => Recupera dados formulario. Funciona apenas com body parser 
+- instalar body.parser
+npm install body-parser@1.17.2 --save
+- body parser funciona como um Middleware. Precisa ser carregado antes dos includes da aplicação
+
+
+
+
+
 40. Inserindo registros no banco de dados MySQL
 ===============================================

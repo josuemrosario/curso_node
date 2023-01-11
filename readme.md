@@ -31,6 +31,7 @@ Jorge Sant'ana
 * API RESTful
 * CommonJS
 * Consign 0.1.6
+* Body Parser 1.17.2
 
 # Passos Iniciais
 * Instalar Node.js

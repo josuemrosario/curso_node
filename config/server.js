@@ -14,6 +14,11 @@ app.set('view engine','ejs')
 //configura o diretorio padrão das views
 app.set('views','./app/views')
 
+
+//Aula 39 configura body parser
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: true})); //trata parametros enviados pela URL
+
 //Aula 31 - Configura o diretório de rotas no consign
 //Aula 32 - inserido conexão com o banco
 consign()
