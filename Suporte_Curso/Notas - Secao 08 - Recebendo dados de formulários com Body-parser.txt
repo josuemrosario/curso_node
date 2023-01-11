@@ -1,0 +1,15 @@
+36. Criando um formulário de cadastro de notícias
+=================================================
+
+form_add_noticia.ejs
+- Criado formulario para criar noticia
+- Associado a rota /noticias/salvar
+
+37. Extra - Resolvendo conflitos de encoding
+============================================
+38. Extra - Resolvendo conflitos de encoding [SUBLIME TEXT 3]
+=============================================================
+39. Recebendo dados de formulários via POST com Body-parser
+===========================================================
+40. Inserindo registros no banco de dados MySQL
+===============================================

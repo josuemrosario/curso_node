@@ -1,0 +1,10 @@
+43. Introdução Express Validator
+================================
+44. NPM- Instalando o Express Validator
+=======================================
+45. Refactoring do projeto prático portal de notícias com Express Validator
+===========================================================================
+46. Exibindo erros de validação com express-validator
+=====================================================
+47. Mantendo o preenchimento do formulário
+==========================================

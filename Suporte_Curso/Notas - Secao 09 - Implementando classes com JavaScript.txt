@@ -1,0 +1,4 @@
+41. Classes convencionais x classes JavaScript
+==============================================
+42. Refactoring do projeto prático portal de notícias - implementando classes
+=============================================================================

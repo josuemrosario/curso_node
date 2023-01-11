@@ -1,0 +1,12 @@
+51. Download de HTMLs e assets do projeto prático portal de notícias
+====================================================================
+52. Incluindo recursos estáticos
+================================
+53. Reaplicando a lógica de back-end - parte 1
+==============================================
+54. Reaplicando a lógica de back-end - parte 2
+==============================================
+55. Reaplicando a lógica de back-end - parte 3
+==============================================
+56. Enviando e recebendo parâmetros (request.query)
+===================================================

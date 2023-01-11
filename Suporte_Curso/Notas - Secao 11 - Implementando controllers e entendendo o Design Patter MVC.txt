@@ -1,0 +1,6 @@
+48. Implementando controllers
+=============================
+49. Designer pattern Model-View-Controller (MVC)
+================================================
+50. Opcional - Download dos arquivos portal de notícias
+=======================================================
