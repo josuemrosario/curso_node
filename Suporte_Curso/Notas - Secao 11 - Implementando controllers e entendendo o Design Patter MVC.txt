@@ -1,5 +1,10 @@
 48. Implementando controllers
 =============================
+- a rota /noticia foi movida para noticias.js
+- noticia.js foi excluido
+- Criado a pasta Controllers
+- Toda a lógica que estava nas rotas foram transferidas para os respectivos controllers
+
 49. Designer pattern Model-View-Controller (MVC)
 ================================================
 50. Opcional - Download dos arquivos portal de notícias

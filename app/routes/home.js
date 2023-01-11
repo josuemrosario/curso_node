@@ -1,10 +1,7 @@
-module.exports = function(app){
+module.exports = function(application){
 
-    app.get('/',function(req,res){
-        
-        //res.send("<html><body>Noticias de Tecnologia</body></html>");
-        
-        res.render("home/index") //renderiza uma view
+    application.get('/',function(req,res){
+        application.app.controllers.home.index(application,req,res);
     });
 
 };

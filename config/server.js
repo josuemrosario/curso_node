@@ -31,6 +31,7 @@ consign()
     .include('app/routes') //rotas
     .then('config/dbConnection.js') // acesso a banco
     .then('app/models') // modelos
+    .then('app/controllers') //aula 48
     .into(app);
 
 
