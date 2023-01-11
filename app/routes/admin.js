@@ -1,7 +1,7 @@
 module.exports = function(application){
 
     application.get('/formulario_inclusao_noticia',function(req,res){
-        res.render("admin/form_add_noticia") //renderiza uma view
+        res.render("admin/form_add_noticia", {validacao: {}}) //renderiza uma view
     });
 
     //aula 39
@@ -20,8 +20,9 @@ module.exports = function(application){
         req.assert('noticia','Noticia é Obrigatória').notEmpty();
 
         var erros = req.validationErrors();
+        console.log(erros);
         if(erros){
-            res.render("admin/form_add_noticia")
+            res.render("admin/form_add_noticia",{validacao : erros})
             return;
         }
 
