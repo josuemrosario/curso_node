@@ -1,7 +1,23 @@
 43. Introdução Express Validator
 ================================
+Express-validator é um validador de dados
+Trata o request
+Quando um critério nao é atendido atualiza uma variável de erro
+
 44. NPM- Instalando o Express Validator
 =======================================
+
+- instala o express-validator
+
+npm install --save express-validator@3.2.0 -E
++ express-validator@3.2.0
+added 14 packages from 82 contributors and audited 73 packages in 14.106s
+found 17 vulnerabilities (7 low, 4 moderate, 5 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+
+- Configurado express-validator no config/server.js
+
 45. Refactoring do projeto prático portal de notícias com Express Validator
 ===========================================================================
 46. Exibindo erros de validação com express-validator

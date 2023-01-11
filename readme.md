@@ -14,7 +14,7 @@ Jorge Sant'ana
 * Node.js
 * NPM
 * Express
-* Express Validator
+* Express Validator 3.2.0
 * EJS
 * NodeMon
 * VsCode

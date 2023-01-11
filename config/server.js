@@ -19,6 +19,12 @@ app.set('views','./app/views')
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true})); //trata parametros enviados pela URL
 
+
+//Aula 44 - configura Express validator
+var expressValidator = require('express-validator');
+app.use(expressValidator());
+
+
 //Aula 31 - Configura o diretório de rotas no consign
 //Aula 32 - inserido conexão com o banco
 consign()
