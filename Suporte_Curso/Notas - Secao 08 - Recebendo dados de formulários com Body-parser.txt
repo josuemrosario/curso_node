@@ -32,16 +32,63 @@ Obs: Inicialmente o arquivo não foi salvo como UTF8. Posteriormente o VsCode id
 
 39. Recebendo dados de formulários via POST com Body-parser
 ===========================================================
-- formulario_inclusao_noticia.ejs para a se chamar admin.ejs
+- Routes/formulario_inclusao_noticia.ejs para a se chamar admin.ejs
 - adicionado rota /noticias/salvar
 req.body; => Recupera dados formulario. Funciona apenas com body parser 
 - instalar body.parser
 npm install body-parser@1.17.2 --save
 - body parser funciona como um Middleware. Precisa ser carregado antes dos includes da aplicação
-
-
+- Configurado body parser no config/server.js
+- Form_add_noticias passa a chamar (via POST) a rota /noticias/salvar
+- Rota envia o body do formulario para a tela
 
 
 
 40. Inserindo registros no banco de dados MySQL
 ===============================================
+
+- Rota /noticias/salvar' dentro de admin.js alterado para chamar salvarNoticia passando um json com as noticias, a conexão e a função de callback que renderiza a rota após salvamento
+- Adicionado a função salvarNoticia() dentro de noticiasModel
+- O json recebido pelo formulario form_add_noticias é passado como parametro para o metodo query
+connection.query('insert into noticias set ?',noticia) => 
+   os dados de noticia serão substituirão o ? da query
+   os rotulos do json precisam ter o mesmo nome dos campos da tabela para funcionar
+- Ao salvar no banco não é possivel usar o método render porque isso iria permitir ao usuário teclar F5, reenviar os dados e duplicar registros no banco
+- Além disso é necessário enviar para a paginas de noticias um array de noticias para ser mostrado. Quando o sistema insere uma noticia esse array não é gerado
+- Dai o uso de redirect em vez de render pois será  carregado do zero a rota, o array será criado e o problema do F5 será contornado.
+
+obs: Toda requisição por POST deve usar redirect para não ocorrer o problema com F5
+
+RESUMO DO SISTEMA ATÉ O MOMENTO
+===============================
+
+Parte 01
+--------
+
+- app.js roda config/server.js
+- config/server.js 
+    configura EJS 
+    Consign faz autoload das rotas e modelos e insere dentro do objeto app 
+    Configura o bodyparser que permite que sejam enviados parametros via urlencoded
+
+- Cada rota carregada terá sua propria função de callback que será chamada quando a rota for chamada. As rotas estão dentro de ./routes
+
+Parte 2
+--------
+   Usuário chama uma rota especifica usando um verbo especifico (GET, POST etc)
+   A pesquisa é feita dentro dos arquivos que estão dentro de ./routes
+   exemplo: app.get('/noticias',function(req,res) { (...) })
+   req -> Requisição feita (com parametros urlencoded)
+   res -> resposta que será manipulada dentro da função de callback
+   A funçao de callback tem algumas funções
+     - Criar a conexão com o banco
+     - Instanciar o model
+     - Receber parametros via request
+     - Enviar estes dados para método que está dentro do modelo
+
+Parte 3
+-------
+O modelo 
+  - faz efetivamente a conexão com o banco
+  - Executa queries
+  - Executa a função de callback ( que tem a função de redirecionar para a pagina correta da aplicação)
