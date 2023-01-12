@@ -13,10 +13,14 @@
 ==============================================
 - Mostra as 5 ulltimas noticias na view inicial index.ejs
 
-
 54. Reaplicando a lógica de back-end - parte 2
 ==============================================
+- Acrescentado action do form_add_noticias
+- Ajustado para mostrar erros
+
 55. Reaplicando a lógica de back-end - parte 3
 ==============================================
+- Ajustado view noticia.ejs para mostra a noticia
+
 56. Enviando e recebendo parâmetros (request.query)
 ===================================================
