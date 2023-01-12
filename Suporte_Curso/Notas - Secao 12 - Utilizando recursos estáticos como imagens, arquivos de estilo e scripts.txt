@@ -24,3 +24,8 @@
 
 56. Enviando e recebendo parâmetros (request.query)
 ===================================================
+- Ajusta o controller noticias.js para garantir que o id da noticia clicada chegue em noticiasDAO
+
+57. Opcional - Download dos arquivos portal de notícias 
+===================================================
+- Apenas para baixar arquivos
